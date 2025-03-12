@@ -1,3 +1,5 @@
+![Logo](https://github.com/sawantvishwajeet729/ideahive/blob/main/artifacts/idea_hive_banner.png)
+
 ## Introduction
 IdeaHive is a web application that utilizes Reddit's vast conversation data to generate business ideas. By leveraging large language models and natural language processing techniques, IdeaHive provides users with actionable insights and potential solutions to real-world problems.
 
@@ -32,15 +34,19 @@ To run IdeaHive, you will need to install the following dependencies:
 4. Run the application using `streamlit run front_end.py`.
 
 ## Usage
-1. Open the application in your web browser.
+1. Open the link [ideaHive](https://ideahive.streamlit.app/) in your web browser.
 2. Select a topic of interest and choose a large language model.
-3. Click the "Analyze" button to generate a business idea based on the extracted Reddit posts.
+3. Press "Enter" to generate a business idea based on the extracted Reddit posts.
 
 ## Contributing
 Contributions to IdeaHive are welcome. If you have any suggestions or improvements, please submit a pull request or open an issue.
 
 ## License
 IdeaHive is licensed under the MIT License. See the LICENSE file for more information.
+
+## Authors
+
+- [@VishwajeetSawant](https://github.com/sawantvishwajeet729)
 
 ## Contact
 For any questions or feedback, please contact Vishwajeet Sawant at [sawantvishwajeet729@gmail.com](mailto:sawantvishwajeet729@gmail.com).
