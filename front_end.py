@@ -226,7 +226,7 @@ elif current_page == "donate":
     }
     </style>
     
-    <a class="donate-button" href="https://buymeacoffee.com/sawantvishwajeet729" target="_blank">
+    <a class="donate-button" href="https://github.com/sponsors/sawantvishwajeet729" target="_blank">
         Buy me a Coffee 🧋
     </a>
     """,
