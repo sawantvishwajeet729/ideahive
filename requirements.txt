@@ -1,0 +1,8 @@
+praw
+langchain
+langchain_community
+langchain_openai
+langchain_core
+faiss-cpu
+langchain_groq
+streamlit
