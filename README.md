@@ -1,4 +1,4 @@
-![Logo](https://github.com/sawantvishwajeet729/ideahive/blob/main/artifacts/idea_hive_banner.png)
+![Logo](https://github.com/sawantvishwajeet729/ideahive/blob/main/artifacts/idea_hive.png)
 
 ## Introduction
 IdeaHive is a web application that utilizes Reddit's vast conversation data to generate business ideas. By leveraging large language models and natural language processing techniques, IdeaHive provides users with actionable insights and potential solutions to real-world problems.
