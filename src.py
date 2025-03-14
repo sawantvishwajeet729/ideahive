@@ -13,12 +13,17 @@ from langchain.chains import create_retrieval_chain
 def get_post(subject, time_filter="year", limit=20):
     """This function get the reddit posts related to the subject mentioned in the arguments"""
 
-    #setup the reddit API
+    '''#setup the reddit API
     reddit = praw.Reddit(
     client_id=st.secrets['client_id'],
     client_secret=st.secrets['client_secret'],
     user_agent=st.secrets['user_agent']
-    )
+    )'''
+
+    reddit = praw.Reddit(client_id='XEGDp9SauVczrG8jhjpVeg',
+    client_secret='nudzLk7ACRQs4kQarWTNUhRwJelM9A',
+    user_agent='ExcitingSport8538')
+
     # Define search parameters
     time_filter = time_filter
     query = f'{subject} and (problem OR issue OR help OR advice OR "bad experience")'
@@ -97,6 +102,43 @@ def get_idea(vector_retriever,groq_key, subject,  model = "llama-3.3-70b-versati
                     timeout=None,
                     max_retries=2)
 
+    #create document chain
+    document_chain = create_stuff_documents_chain(model, business_prompt)
+
+    #invoke the document chain with the context as a string
+    response = document_chain.invoke({"context": "", "subject": subject})
+
+    return response
+
+
+def post_cot(vector_retriever, subject, groq_key):
+    """This function analyses the post and extract summary point. Also it discards the irrelevants post which are not related to the subject mentioned"""
+
+#define the prompt
+    business_prompt = PromptTemplate(
+    input_variables=["context", "subject"],
+    template="""
+    You are analyzing Reddit posts to extract business ideas for the keyword: {subject}.
+
+    Step 1: Identify the main topic of the post.
+    Step 2: Determine if the post is relevant to the keyword "<keyword>".
+    Step 3: If relevant, summarize the key problem discussed.
+    Step 4: If not relevant, explain why it is unrelated.
+
+    Here is the Reddit post:
+    {context}
+
+    Follow the steps and provide a structured response."""
+    )
+
+    #define the llm model
+    model = ChatGroq(groq_api_key=groq_key,
+                    model="llama-3.3-70b-versatile",
+                    temperature=0,
+                    max_tokens=None,
+                    timeout=None,
+                    max_retries=2)
+    
     #create document chain
     document_chain = create_stuff_documents_chain(model, business_prompt)
 
