@@ -5,12 +5,8 @@ import os
 from src import *
 
 #setup environment and secret keys
-#os.environ['OPENAI_API_KEY']=st.secrets['openai_key']
-#groq_key= st.secrets['groq_key']
-
-os.environ['OPENAI_API_KEY']="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"
-groq_key="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"
-
+os.environ['OPENAI_API_KEY']=st.secrets['openai_key']
+groq_key= st.secrets['groq_key']
 
 # LLm model selection
 model_name = {
