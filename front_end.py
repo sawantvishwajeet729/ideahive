@@ -72,9 +72,6 @@ with st.sidebar:
     st.sidebar.image("artifacts/idea_hive.png", width=150)
     st.markdown("---")
     
-    st.write(os.getenv("LANGCHAIN_API_KEY"))
-    st.write(os.getenv("LANGCHAIN_PROJECT"))
-    
     # Create navigation links with proper styling
     pages = {
         "home": "🏠 Home",
