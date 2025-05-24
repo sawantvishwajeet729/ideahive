@@ -8,6 +8,11 @@ from src import *
 os.environ['OPENAI_API_KEY']=st.secrets['openai_key']
 groq_key= st.secrets['groq_key']
 
+#Langchain tracking and tracing
+os.environ["LANGCHAIN_API_KEY"] = st.secrets['lanchain_key']
+os.environ["LANGCHAIN_PROJECT"] = "IdeaHive"
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+
 # LLm model selection
 model_name = {
         'Llama': 'llama-3.3-70b-versatile',
