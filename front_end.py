@@ -13,10 +13,6 @@ os.environ["LANGCHAIN_API_KEY"] = st.secrets['lanchain_key']
 os.environ["LANGCHAIN_PROJECT"] = "IdeaHive"
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 
-#temp
-print(os.getenv("LANGCHAIN_API_KEY"))
-print(os.getenv("LANGCHAIN_PROJECT"))
-
 # LLm model selection
 model_name = {
         'Llama': 'llama-3.3-70b-versatile',
